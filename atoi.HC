@@ -17,7 +17,7 @@ I64 atoi(U8 *str)
         if ('0' <= *str && *str <= '9')
             n = n * 10 + *str - '0';
         else
-            return n;
+            break;
         str++;
     }
     if (minus_flag)
@@ -27,6 +27,6 @@ I64 atoi(U8 *str)
 
 I64 Main()
 {
-    "%d\n", atoi("21834o");
+    "%d\n", atoi("-21834o");
     return 0;
 }
